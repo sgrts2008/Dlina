@@ -1,131 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Happy Valentine’s Day 💛</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #ffd1dc, #c1e1ff);
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<title>For You Dilna 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .card {
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(12px);
-      border-radius: 25px;
-      padding: 35px 25px;
-      max-width: 420px;
-      width: 90%;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.2);
-      position: relative;
-    }
+<!-- Romantic Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 5px;
-    }
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#ffd6e8,#e6f0ff);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
 
-    h2 {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-      font-weight: 500;
-    }
+.card{
+  background:white;
+  padding:28px;
+  border-radius:28px;
+  max-width:420px;
+  width:90%;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
 
-    .heart {
-      font-size: 3.2rem;
-      animation: beat 1.1s infinite;
-      margin: 15px 0;
-    }
+/* UNIQUE VALENTINE TITLE */
+.valentine-title{
+  font-family: 'Pacifico', cursive;
+  font-size: 28px;
+  background: linear-gradient(90deg, #ff3b7a, #ff8fb3, #ff3b7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255,59,122,0.4);
+  margin-bottom: 10px;
+}
 
-    @keyframes beat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.25) rotate(3deg); }
-    }
+h1{color:#ff3b7a;}
+p{color:#ff5c8a; font-size:16px;}
 
-    p {
-      line-height: 1.6;
-      font-size: 1rem;
-      margin-bottom: 18px;
-    }
+.btn{
+  padding:12px 22px;
+  margin:8px;
+  border:none;
+  border-radius:25px;
+  font-size:16px;
+  cursor:pointer;
+  background:#ff6f9f;
+  color:white;
+  transition:0.2s;
+}
 
-    .btn {
-      background: #fff;
-      color: #ff6f91;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-    }
+.btn:hover{transform:scale(1.05);}
 
-    .btn:hover {
-      transform: scale(1.08) rotate(-2deg);
-      background: #ffe9f0;
-    }
+.no-btn{
+  background:#aaa;
+  color:#333;
+}
 
-    .hidden-message {
-      display: none;
-      margin-top: 20px;
-      font-style: italic;
-      color: #fff;
-      animation: pop 0.6s ease;
-    }
-
-    @keyframes pop {
-      0% { transform: scale(0.8); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    footer {
-      margin-top: 25px;
-      font-size: 0.9rem;
-      opacity: 0.95;
-    }
-
-    /* Floating hearts */
-    .float-heart {
-      position: absolute;
-      font-size: 1.2rem;
-      animation: floatUp 6s linear infinite;
-      opacity: 0.8;
-    }
-
-    @keyframes floatUp {
-      0% { transform: translateY(0) scale(1); opacity: 0; }
-      10% { opacity: 1; }
-      100% { transform: translateY(-120vh) scale(1.5); opacity: 0; }
-    }
-  </style>
+.page{display:none;}
+.active{display:block;}
+</style>
 </head>
 <body>
-  <div class="card">
-    <h1>Hi Dilna! 💖</h1>
-    <div class="heart">❤️</div>
-    <p>Happy Valentine’s Day! Just wanted to say I really value our friendship. 🐻✨</p>
-    <p>Hope this little website makes you smile! 😄</p>
-    <button class="btn" onclick="showMessage()">Click for a Surprise 💌</button>
-    <div class="hidden-message" id="secret">
-      <p>Dilna, you’re an amazing friend and I’m really thankful for you! May your days always be full of smiles and happiness. 💖</p>
-    </div>
-    <footer>From your friend,<br />Sagar 💛</footer>
+
+<!-- PAGE 1 -->
+<div class="card page active" id="page1">
+
+  <!-- UNIQUE BASE TITLE -->
+  <div class="valentine-title">
+    💖 DILNA JOY 💖<br>
+    Will You Be Mine Valentine? 💌
   </div>
 
-  <script>
-    function showMessage() {
-      const msg = document.getElementById('secret');
-      msg.style.display = 'block';
-    }
-  </script>
+  <p>Be honest… you smiled when you saw this, right? 😏💖</p>
+  <p>Go on… click Yes and make my heart happy 🥹❤️</p>
+
+  <div id="btnBox">
+    <button class="btn" onclick="yesClicked()">Yes 😍</button>
+    <button class="btn no-btn" id="noBtn" onmouseover="spawnYes()">No 🙈</button>
+  </div>
+</div>
+
+<!-- PAGE 2 : SAD -->
+<div class="card page" id="page2">
+  <h1>I'm Sad 😢</h1>
+  <p>I was hoping you’d choose me… not gonna lie 😔</p>
+  <p>It hurts because I actually care 💔</p>
+  <p>You make my heart do stupid things 🥺</p>
+  <p>Even now, a part of me is still smiling for you 💕</p>
+
+  <button class="btn" onclick="goBack()">Go Back 😔</button>
+</div>
+
+<!-- PAGE 3 : YES -->
+<div class="card page" id="page3">
+  <h1>YAY!!! 😍💖</h1>
+  <p>You said YES 💓</p>
+
+  <p>Dilna, you have no idea how attractive your smile is to me 😍</p>
+  <p>Every time I talk to you, I forget about everything else 💭💖</p>
+  <p>You don’t even try, and still you make my heart beat faster 💓</p>
+  <p>I think my favorite place is wherever you are 🥰</p>
+  <p>If I had one wish, it would be more moments with you 💫</p>
+  <p>You make my heart feel calm, happy, and complete 💕</p>
+  <p>I get a little happy every time I see your name pop up 📱💖</p>
+  <p>Honestly… you’re a little too special to me ❤️</p>
+
+  <p style="margin-top:15px;"><b>Happy Valentine’s Day, Dilna 💌</b></p>
+  <p><b>- Sagar ❤️</b></p>
+</div>
+
+<script>
+function spawnYes(){
+  var box = document.getElementById("btnBox");
+  var btn = document.createElement("button");
+  btn.className = "btn";
+  btn.innerText = "Yes 😍";
+  btn.onclick = yesClicked;
+  box.appendChild(btn);
+}
+
+document.getElementById("noBtn").onclick = function(){
+  showPage("page2");
+};
+
+function yesClicked(){
+  showPage("page3");
+}
+
+function goBack(){
+  showPage("page1");
+}
+
+function showPage(id){
+  var pages = document.getElementsByClassName("page");
+  for(var i=0;i<pages.length;i++){
+    pages[i].classList.remove("active");
+  }
+  document.getElementById(id).classList.add("active");
+}
+</script>
+
 </body>
 </html>
